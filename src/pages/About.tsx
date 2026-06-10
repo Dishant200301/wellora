@@ -347,9 +347,9 @@ export default function About() {
         </div>
 
         <div className="mt-[60px] xl:mt-[100px] relative max-w-[1200px] mx-auto px-4 lg:px-0">
-          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center gap-6 xl:gap-0">
+          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-end gap-6 xl:gap-0">
             {/* Arrow - Centered on mobile/tablet/laptop, Left on desktop */}
-            <div className="relative shrink-0 mb-4 xl:mb-0 xl:mt-12 xl:mr-4 transform -rotate-12 xl:rotate-0">
+            <div className="relative shrink-0 mb-4 xl:mb-0 xl:mt-12 xl:mr-4 transform -rotate-12 xl:rotate-0 self-center xl:self-start">
               <img 
                 src="/images/about/arrow-icon.png" 
                 alt="Arrow" 
@@ -357,9 +357,9 @@ export default function About() {
               />
             </div>
 
-            {/* Quote Content - Centered on mobile/tablet/laptop, Left on desktop */}
-            <div className="flex flex-col items-center xl:items-start space-y-4 max-w-[500px] text-center xl:text-left">
-              <div className="w-[32px] h-[32px] md:w-[48px] md:h-[48px] border-2 border-[#111514] rounded-full flex items-center justify-center p-1 md:p-2">
+            {/* Quote Content - Centered on mobile, Left on tablet/laptop/desktop */}
+            <div className="flex flex-col items-center md:items-start xl:items-start space-y-4 md:max-w-[600px] xl:max-w-[500px] text-center md:text-left xl:text-left w-full">
+              <div className="w-[32px] h-[32px] md:w-[48px] md:h-[48px] border-2 border-[#111514] rounded-full flex items-center justify-center p-1.5 md:p-2 shrink-0">
                 <img 
                   src="/images/about/quote.png" 
                   alt="Quote Icon" 

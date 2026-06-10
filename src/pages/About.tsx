@@ -302,16 +302,16 @@ export default function About() {
         </div>
       </section>
 
-      <section className="container-px max-w-[1320px] mx-auto py-[100px]">
-        <div className="text-center mb-[80px]">
+      <section className="container-px max-w-[1320px] mx-auto py-[60px] md:py-[80px] xl:py-[100px]">
+        <div className="text-center mb-[40px] md:mb-[60px] xl:mb-[80px]">
           <div className="text-[16.7px] leading-[28px] text-[#4C4D4D] font-normal font-sans">My Approach</div>
-          <h2 className="mt-[21.5px] text-[32px] md:text-[44.1px] leading-[40px] md:leading-[56px] font-medium text-[#111514] font-sans max-w-[500px] mx-auto">
+          <h2 className="mt-[21.5px] text-[28px] md:text-[36px] xl:text-[44.1px] leading-[36px] md:leading-[48px] xl:leading-[56px] font-medium text-[#111514] font-sans max-w-[400px] lg:max-w-[500px] mx-auto">
             Principles that shape every consultation I have
           </h2>
         </div>
 
         <div className="bg-[#EFF0EB] rounded-[20px] p-[16px]">
-          <div className="grid md:grid-cols-3 gap-[16px]">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-[16px]">
             {[
               {
                 num: "01",
@@ -329,15 +329,15 @@ export default function About() {
                 desc: "I’ll let you know when things are unclear and explain what our next steps are."
               }
             ].map((principle, index) => (
-              <div key={index} className="bg-[#FEFFFA] rounded-[16px] p-[32px] h-[244px] flex flex-col">
-                <div className="text-[21.4px] md:text-[22.9px] leading-[34px] font-medium text-[#B7B7B7] font-sans mb-[41px]">
+              <div key={index} className="bg-[#FEFFFA] rounded-[16px] p-[24px] md:p-[32px] h-auto xl:h-[244px] flex flex-col">
+                <div className="text-[21.4px] md:text-[22.9px] leading-[34px] font-medium text-[#B7B7B7] font-sans mb-[24px] xl:mb-[41px]">
                   {principle.num}
                 </div>
                 <div className="mt-auto">
-                  <h3 className="text-[22.1px] leading-[34px] font-medium text-[#111514] font-sans">
+                  <h3 className="text-[20px] md:text-[22.1px] leading-[30px] md:leading-[34px] font-medium text-[#111514] font-sans">
                     {principle.title}
                   </h3>
-                  <p className="mt-[11px] text-[16.3px] leading-[28px] text-[#4C4D4D] font-sans">
+                  <p className="mt-[11px] text-[15px] md:text-[16.3px] leading-[24px] md:leading-[28px] text-[#4C4D4D] font-sans">
                     {principle.desc}
                   </p>
                 </div>
@@ -346,20 +346,20 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-[10px] relative max-w-[1200px] mx-auto px-4 lg:px-0">
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-center lg:justify-end gap-6 md:gap-0">
-            {/* Arrow on the left */}
-            <div className="relative shrink-0 md:mt-12 md:mr-4 transform -rotate-12 md:rotate-0">
+        <div className="mt-[60px] xl:mt-[100px] relative max-w-[1200px] mx-auto px-4 lg:px-0">
+          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center gap-6 xl:gap-0">
+            {/* Arrow - Centered on mobile/tablet/laptop, Left on desktop */}
+            <div className="relative shrink-0 mb-4 xl:mb-0 xl:mt-12 xl:mr-4 transform -rotate-12 xl:rotate-0">
               <img 
                 src="/images/about/arrow-icon.png" 
                 alt="Arrow" 
-                className="w-[100px] md:w-[150px] h-auto object-contain"
+                className="w-[80px] md:w-[120px] xl:w-[180px] h-auto object-contain"
               />
             </div>
 
-            {/* Quote Content on the right */}
-            <div className="flex flex-col items-center md:items-start space-y-4 max-w-[500px] text-center md:text-left">
-              <div className="w-[30px] h-[30px]">
+            {/* Quote Content - Centered on mobile/tablet/laptop, Left on desktop */}
+            <div className="flex flex-col items-center xl:items-start space-y-4 max-w-[500px] text-center xl:text-left">
+              <div className="w-[32px] h-[32px] md:w-[48px] md:h-[48px] border-2 border-[#111514] rounded-full flex items-center justify-center p-1 md:p-2">
                 <img 
                   src="/images/about/quote.png" 
                   alt="Quote Icon" 
@@ -367,19 +367,19 @@ export default function About() {
                 />
               </div>
               
-              <h4 className="text-[24px] md:text-[29.3px] leading-[36px] md:leading-[40px] font-medium text-[#111514] font-sans">
+              <h4 className="text-[20px] md:text-[24px] xl:text-[29.3px] leading-[28px] md:leading-[36px] xl:leading-[40px] font-medium text-[#111514] font-sans">
                 Three things I believe every patient deserves at every visit
               </h4>
 
-              <div className="flex items-center gap-[12px] pt-4">
-                <div className="w-[32px] h-[32px] rounded-full overflow-hidden shrink-0 bg-[#1e9b69]">
+              <div className="flex items-center gap-[12px] pt-2 xl:pt-4">
+                <div className="w-[32px] h-[32px] rounded-full overflow-hidden shrink-0 border border-black/10">
                   <img 
                     src="/images/home/doctor_avatar.webp" 
                     alt="Dr. Arden" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="text-[18.4px] leading-[28px] font-medium text-[#111514] font-sans">
+                <span className="text-[16px] md:text-[18.4px] leading-[28px] font-medium text-[#111514] font-sans">
                   Dr. Arden
                 </span>
               </div>

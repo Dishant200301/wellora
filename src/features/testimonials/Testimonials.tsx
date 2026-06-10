@@ -98,7 +98,10 @@ export default function Testimonials() {
                       {/* Rating Stars */}
                       <div className="flex gap-1 mb-4">
                         {Array.from({ length: t.rating }).map((_, idx) => (
-                          <Star key={idx} className="size-4 sm:size-5 fill-[#111514] text-[#111514]" />
+                          <Star
+                            key={idx}
+                            className="size-4 sm:size-5 fill-[#111514] text-[#111514]"
+                          />
                         ))}
                       </div>
 
@@ -128,11 +131,7 @@ export default function Testimonials() {
 
                   {/* Patient Image */}
                   <div className="mx-3 mb-3 rounded-[16px] overflow-hidden h-[180px] sm:h-[200px] md:h-[220px]">
-                    <Img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-full h-full object-cover"
-                    />
+                    <Img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -152,7 +151,10 @@ export default function Testimonials() {
 
           <div className="flex items-center gap-2">
             {testimonials.map((_, idx) => (
-              <div key={idx} className="w-[10px] h-[10px] flex items-center justify-center shrink-0">
+              <div
+                key={idx}
+                className="w-[10px] h-[10px] flex items-center justify-center shrink-0"
+              >
                 <button
                   onClick={() => mobileScrollTo(idx)}
                   className={`rounded-full transition-all duration-300 ${
@@ -184,10 +186,8 @@ export default function Testimonials() {
               <div key={i} className="flex-[0_0_auto] min-w-0 px-2">
                 {/* Outer Patient Story Card */}
                 <div className="relative bg-[#EFF0EB] rounded-[20px] p-4 flex flex-row gap-4 w-[1344px] h-[726px] border border-black/[0.06] overflow-hidden">
-                  
                   {/* Left Side: Quote Card & Patient Image */}
                   <div className="w-1/2 flex flex-col gap-4 justify-between h-full">
-                    
                     {/* Quote Card */}
                     <div className="bg-[#FEFFFA] rounded-[16px] p-10 flex flex-col justify-between flex-grow min-h-[220px]">
                       <div>
@@ -197,7 +197,7 @@ export default function Testimonials() {
                             <Star key={idx} className="size-5 fill-[#111514] text-[#111514]" />
                           ))}
                         </div>
-                        
+
                         {/* Testimonial Quote */}
                         <blockquote className="text-[22.1px] leading-[34px] font-medium text-[#111514] font-sans">
                           "{t.text}"
@@ -224,11 +224,7 @@ export default function Testimonials() {
 
                     {/* Patient Image */}
                     <div className="w-full h-[394px] rounded-[16px] overflow-hidden shrink-0">
-                      <Img
-                        src={t.image}
-                        alt={t.name}
-                        className="w-full h-full object-cover"
-                      />
+                      <Img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                     </div>
                   </div>
 
@@ -252,7 +248,7 @@ export default function Testimonials() {
                         <h3 className="text-[22.1px] leading-[34px] font-medium text-[#111514] font-sans">
                           {t.title}
                         </h3>
-                        
+
                         {/* Problem and Solution Cards */}
                         <div className="flex flex-col gap-4 mt-6">
                           {/* Problem Card */}
@@ -285,8 +281,12 @@ export default function Testimonials() {
                     >
                       <span className="relative block overflow-hidden h-[24px]">
                         <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                          <span className="h-[24px] flex items-center justify-center">Book Appointment</span>
-                          <span className="h-[24px] flex items-center justify-center">Book Appointment</span>
+                          <span className="h-[24px] flex items-center justify-center">
+                            Book Appointment
+                          </span>
+                          <span className="h-[24px] flex items-center justify-center">
+                            Book Appointment
+                          </span>
                         </span>
                       </span>
                     </Link>
@@ -302,7 +302,10 @@ export default function Testimonials() {
           {testimonials.map((t, idx) => {
             const isActive = idx === selected;
             return (
-              <div key={idx} className="w-[72px] h-[72px] flex items-center justify-center shrink-0">
+              <div
+                key={idx}
+                className="w-[72px] h-[72px] flex items-center justify-center shrink-0"
+              >
                 <button
                   onClick={() => scrollTo(idx)}
                   className={`relative rounded-full transition-all duration-300 overflow-hidden shrink-0 ${
@@ -311,11 +314,7 @@ export default function Testimonials() {
                       : "w-[58px] h-[58px] border border-[#EAE9E9] opacity-80 hover:opacity-100"
                   }`}
                 >
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                 </button>
               </div>
             );

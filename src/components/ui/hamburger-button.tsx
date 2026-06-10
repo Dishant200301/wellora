@@ -4,8 +4,10 @@ import { cn } from "@/lib/utils";
 
 export type HamburgerVariant = "standard" | "elastic" | "minimal";
 
-export interface HamburgerButtonProps
-  extends Omit<HTMLMotionProps<"button">, "children" | "onClick"> {
+export interface HamburgerButtonProps extends Omit<
+  HTMLMotionProps<"button">,
+  "children" | "onClick"
+> {
   /**
    * The active open/close state of the menu.
    */
@@ -53,7 +55,7 @@ export const HamburgerButton = React.forwardRef<HTMLButtonElement, HamburgerButt
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     // Dynamic Spring transition based on selected variant style
     const springTransition: Transition = {
@@ -104,8 +106,9 @@ export const HamburgerButton = React.forwardRef<HTMLButtonElement, HamburgerButt
         aria-label={isOpen ? "Close menu" : "Open menu"}
         className={cn(
           "relative flex items-center justify-center p-2 rounded-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1c8e6a] transition-shadow select-none",
-          hoverBg && "hover:bg-[#111514]/5 dark:hover:bg-white/10 active:scale-95 transition-[background-color,transform] duration-200",
-          className
+          hoverBg &&
+            "hover:bg-[#111514]/5 dark:hover:bg-white/10 active:scale-95 transition-[background-color,transform] duration-200",
+          className,
         )}
         whileHover="hover"
         whileTap="tap"
@@ -182,7 +185,7 @@ export const HamburgerButton = React.forwardRef<HTMLButtonElement, HamburgerButt
         </svg>
       </motion.button>
     );
-  }
+  },
 );
 
 HamburgerButton.displayName = "HamburgerButton";

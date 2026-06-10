@@ -54,7 +54,7 @@ export default function ServicesList() {
                 <h4 className="text-[16px] md:text-[18px] font-medium text-[#111514] font-sans mt-4">
                   What I offer
                 </h4>
-                
+
                 {/* Responsive Tags Layout: stacked column on mobile, wrap on tablet/laptop */}
                 <div className="flex flex-col md:flex-row md:flex-wrap items-start gap-2.5 md:gap-2 mt-3">
                   {s.offers.map((o) => (
@@ -198,8 +198,12 @@ export default function ServicesList() {
                 >
                   <span className="relative block overflow-hidden h-[24px]">
                     <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                      <span className="h-[24px] flex items-center justify-center">View Details</span>
-                      <span className="h-[24px] flex items-center justify-center">View Details</span>
+                      <span className="h-[24px] flex items-center justify-center">
+                        View Details
+                      </span>
+                      <span className="h-[24px] flex items-center justify-center">
+                        View Details
+                      </span>
                     </span>
                   </span>
                 </Link>

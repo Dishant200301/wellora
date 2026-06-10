@@ -24,7 +24,8 @@ export const testimonials: Testimonial[] = [
     subtitle: "Chronic Migraines",
     title: "Migraine Relief",
     problem: "Struggled with severe migraines multiple times a week.",
-    solution: "Dr. Arden created a personalized treatment plan with medication and lifestyle adjustments."
+    solution:
+      "Dr. Wellora created a personalized treatment plan with medication and lifestyle adjustments.",
   },
   {
     name: "Sarah Ahmed",
@@ -37,7 +38,8 @@ export const testimonials: Testimonial[] = [
     subtitle: "Tension Headaches",
     title: "Headache Relief",
     problem: "Daily tension headaches disrupted focus and reduced productivity.",
-    solution: "Doctor introduced stress management techniques and prescribed effective mild medications for relief."
+    solution:
+      "Doctor introduced stress management techniques and prescribed effective mild medications for relief.",
   },
   {
     name: "David Miller",
@@ -50,7 +52,8 @@ export const testimonials: Testimonial[] = [
     subtitle: "Nerve Pain",
     title: "Nerve Pain Management",
     problem: "Persistent nerve pain in legs caused discomfort and poor sleep quality.",
-    solution: "Personalized treatment plan with medications and physiotherapy improved comfort and sleep quality."
+    solution:
+      "Personalized treatment plan with medications and physiotherapy improved comfort and sleep quality.",
   },
   {
     name: "Ayesha Rahman",
@@ -63,7 +66,8 @@ export const testimonials: Testimonial[] = [
     subtitle: "Migraine",
     title: "Chronic Migraine Care",
     problem: "Frequent migraines triggered by stress and light affected routine.",
-    solution: "Lifestyle changes and preventive therapy significantly reduced migraine frequency and severity overall."
+    solution:
+      "Lifestyle changes and preventive therapy significantly reduced migraine frequency and severity overall.",
   },
   {
     name: "Rashid Khan",
@@ -76,6 +80,7 @@ export const testimonials: Testimonial[] = [
     subtitle: "Chronic Migraines",
     title: "Migraine Relief",
     problem: "Severe migraines occurred weekly affecting productivity and daily life.",
-    solution: "Personalized treatment plan with medications and lifestyle adjustments reduced migraine attacks significantly."
-  }
+    solution:
+      "Personalized treatment plan with medications and lifestyle adjustments reduced migraine attacks significantly.",
+  },
 ];

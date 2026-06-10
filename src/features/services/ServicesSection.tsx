@@ -33,7 +33,7 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
   const gap = 16;
 
   // Calculate translation in pixels to center the active card perfectly
-  const translatePx = (width / 2) - (activeIndex * (cardWidth + gap) + cardWidth / 2);
+  const translatePx = width / 2 - (activeIndex * (cardWidth + gap) + cardWidth / 2);
 
   // Swipe handlers for mobile/tablet touch carousel
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -164,7 +164,7 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
                           <span
                             key={k}
                             className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
-                              k === (i % services.length) ? "bg-[#1F9B6A]" : "bg-[#EFF0EB]"
+                              k === i % services.length ? "bg-[#1F9B6A]" : "bg-[#EFF0EB]"
                             }`}
                           />
                         ))}
@@ -185,7 +185,7 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
                     <h4 className="text-[16px] font-medium text-[#111514] font-sans mt-4">
                       What I offer
                     </h4>
-                    
+
                     {/* Responsive Tags Layout: stacked column on mobile/tablet, wrap on laptop */}
                     <div
                       className={
@@ -212,8 +212,12 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
                   >
                     <span className="relative block overflow-hidden h-[24px]">
                       <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                        <span className="h-[24px] flex items-center justify-center">View Details</span>
-                        <span className="h-[24px] flex items-center justify-center">View Details</span>
+                        <span className="h-[24px] flex items-center justify-center">
+                          View Details
+                        </span>
+                        <span className="h-[24px] flex items-center justify-center">
+                          View Details
+                        </span>
                       </span>
                     </span>
                   </Link>
@@ -236,7 +240,7 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
                   key={k}
                   onClick={() => setActiveIndex(k + services.length)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    k === (activeIndex % services.length) ? "bg-[#1F9B6A]" : "bg-[#1F9B6A]/20"
+                    k === activeIndex % services.length ? "bg-[#1F9B6A]" : "bg-[#1F9B6A]/20"
                   }`}
                 />
               ))}
@@ -363,8 +367,12 @@ export default function ServicesSection({ hideHeader = false }: ServicesSectionP
                   >
                     <span className="relative block overflow-hidden h-[24px]">
                       <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                        <span className="h-[24px] flex items-center justify-center">View Details</span>
-                        <span className="h-[24px] flex items-center justify-center">View Details</span>
+                        <span className="h-[24px] flex items-center justify-center">
+                          View Details
+                        </span>
+                        <span className="h-[24px] flex items-center justify-center">
+                          View Details
+                        </span>
                       </span>
                     </span>
                   </Link>

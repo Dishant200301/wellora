@@ -8,19 +8,23 @@ export default function NotFound() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
   };
 
   return (
     <>
-      <SEO title="Page not found" description="The page you are looking for doesn't exist." path="/404" />
+      <SEO
+        title="Page not found"
+        description="The page you are looking for doesn't exist."
+        path="/404"
+      />
       <div className="w-full min-h-screen bg-white p-2 sm:p-3 lg:p-4 flex flex-col">
         <div
           className="relative flex-1 w-full rounded-[24px] md:rounded-[30px] overflow-hidden flex flex-col justify-center items-center py-6 px-4 md:px-8 bg-[#10a375]"

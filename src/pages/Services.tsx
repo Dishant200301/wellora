@@ -4,7 +4,11 @@ import ServicesList from "@/features/services/ServicesList";
 export default function Services() {
   return (
     <>
-      <SEO title="Services" description="Comprehensive neurology services from migraine care to memory and cognitive evaluations." path="/services" />
+      <SEO
+        title="Services"
+        description="Comprehensive neurology services from migraine care to memory and cognitive evaluations."
+        path="/services"
+      />
       <section className="w-full bg-white p-2 sm:p-3 lg:p-4 flex flex-col">
         <div
           className="relative w-full rounded-[24px] lg:rounded-[30px] overflow-hidden flex flex-col justify-end p-6 md:p-10 lg:p-10 h-[calc(80vh-1rem)] sm:h-[calc(80vh-1.5rem)] lg:h-[calc(100vh-2rem)] min-h-[480px]"
@@ -30,4 +34,3 @@ export default function Services() {
     </>
   );
 }
-

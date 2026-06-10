@@ -7,6 +7,7 @@ import { HamburgerButton } from "@/components/ui/hamburger-button";
 
 const links = [
   { to: "/about", label: "About me" },
+  { to: "/services", label: "Services" },
   { to: "/case-studies", label: "Case studies" },
   { to: "/articles", label: "Articles" },
   { to: "/contact", label: "Contact" },
@@ -15,7 +16,11 @@ const links = [
 function Avatar() {
   return (
     <div className="size-8 xl:size-12 rounded-full overflow-hidden bg-[#1c8e6a] flex items-center justify-center shrink-0">
-      <img src="/images/home/doctor_avatar.webp" alt="Dr. Arden" className="w-full h-full object-cover object-top" />
+      <img
+        src="/images/home/doctor_avatar.webp"
+        alt="Dr. Wellora"
+        className="w-full h-full object-cover object-top"
+      />
     </div>
   );
 }
@@ -49,19 +54,19 @@ export default function Navbar() {
     <header className="fixed top-8 md:top-8 xl:top-10 inset-x-0 z-50 pointer-events-none">
       <div className="px-[24px] md:px-[30px] xl:container-px flex justify-center">
         {/* Desktop Navbar */}
-        <div
-          className="hidden xl:flex pointer-events-auto relative items-center gap-3 md:gap-4 rounded-full bg-[#eff0eb] backdrop-blur-xl border border-black/5 pl-2 pr-2 md:pl-3 md:pr-3 py-3 transition-all duration-500 ease-in-out"
-        >
+        <div className="hidden xl:flex pointer-events-auto relative items-center gap-3 md:gap-4 rounded-full bg-[#eff0eb] backdrop-blur-xl border border-black/5 pl-2 pr-2 md:pl-3 md:pr-3 py-3 transition-all duration-500 ease-in-out">
           <div className="flex items-center gap-4 pl-1">
             <Link to="/" className="flex items-center gap-4">
               <Avatar />
               <span
                 className={cn(
                   "overflow-hidden whitespace-nowrap font-medium text-xl text-[#1c8e6a] transition-all duration-500 ease-in-out",
-                  expanded || pathname !== "/" ? "max-w-[150px] opacity-100 mr-2" : "max-w-0 opacity-0 mr-0"
+                  expanded || pathname !== "/"
+                    ? "max-w-[150px] opacity-100 mr-2"
+                    : "max-w-0 opacity-0 mr-0",
                 )}
               >
-                Dr. Arden
+                Dr. Wellora
               </span>
             </Link>
           </div>
@@ -73,7 +78,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     cn(
                       "px-4 py-2.5 rounded-full transition-colors font-sans text-base font-normal leading-6 text-[#111514] hover:bg-[#e5e5e5]",
-                      isActive && "bg-[#e5e5e5]"
+                      isActive && "bg-[#e5e5e5]",
                     )
                   }
                 >
@@ -85,7 +90,9 @@ export default function Navbar() {
           <div
             className={cn(
               "overflow-hidden transition-all duration-500 ease-in-out",
-              expanded || pathname !== "/" ? "max-w-[250px] opacity-100 ml-1" : "max-w-0 opacity-0 ml-0"
+              expanded || pathname !== "/"
+                ? "max-w-[250px] opacity-100 ml-1"
+                : "max-w-0 opacity-0 ml-0",
             )}
           >
             <Link
@@ -106,13 +113,11 @@ export default function Navbar() {
         </div>
 
         {/* Mobile/Tablet Navbar */}
-        <div
-          className="xl:hidden pointer-events-auto relative flex flex-col w-full bg-[#eff0eb] backdrop-blur-xl border border-black/5 rounded-[24px] overflow-hidden"
-        >
+        <div className="xl:hidden pointer-events-auto relative flex flex-col w-full bg-[#eff0eb] backdrop-blur-xl border border-black/5 rounded-[24px] overflow-hidden">
           <div className="flex items-center justify-between pl-2 pr-4 py-1 xl:py-3">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
               <Avatar />
-              <span className="font-medium text-lg text-[#1c8e6a]">Dr. Arden</span>
+              <span className="font-medium text-lg text-[#1c8e6a]">Dr. Wellora</span>
             </Link>
             <HamburgerButton
               isOpen={open}
@@ -142,7 +147,7 @@ export default function Navbar() {
                           className={({ isActive }) =>
                             cn(
                               "block px-2 py-1 rounded-xl transition-colors font-sans text-lg font-normal leading-6 text-[#111514] hover:bg-[#e5e5e5]",
-                              isActive && "bg-[#e5e5e5]"
+                              isActive && "bg-[#e5e5e5]",
                             )
                           }
                         >
@@ -161,8 +166,12 @@ export default function Navbar() {
                     </span>
                     <span className="relative block overflow-hidden h-6">
                       <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                        <span className="h-6 flex items-center justify-center">Book Appointment</span>
-                        <span className="h-6 flex items-center justify-center">Book Appointment</span>
+                        <span className="h-6 flex items-center justify-center">
+                          Book Appointment
+                        </span>
+                        <span className="h-6 flex items-center justify-center">
+                          Book Appointment
+                        </span>
                       </span>
                     </span>
                   </Link>

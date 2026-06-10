@@ -7,7 +7,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, path = "/" }: SEOProps) {
-  const fullTitle = `${title} — Dr. Arden`;
+  const fullTitle = `${title} — Dr. Wellora`;
   return (
     <Helmet>
       <title>{fullTitle}</title>

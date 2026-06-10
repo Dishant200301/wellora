@@ -14,7 +14,10 @@ interface ImgProps extends ImgHTMLAttributes<HTMLImageElement> {
 export function Img({ src, alt, ratio, className, ...rest }: ImgProps) {
   return (
     <div
-      className={cn("relative overflow-hidden bg-gradient-to-br from-muted via-secondary to-muted", className)}
+      className={cn(
+        "relative overflow-hidden bg-gradient-to-br from-muted via-secondary to-muted",
+        className,
+      )}
       style={ratio ? { aspectRatio: ratio } : undefined}
     >
       {src ? (
@@ -23,11 +26,12 @@ export function Img({ src, alt, ratio, className, ...rest }: ImgProps) {
           alt={alt}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).style.display = "none";
+          }}
           {...rest}
         />
       ) : null}
-      
     </div>
   );
 }

@@ -105,8 +105,12 @@ export default function CaseStudiesAccordion() {
                                 >
                                   <span className="relative block overflow-hidden h-[24px]">
                                     <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                                      <span className="h-[24px] flex items-center justify-center">View Details</span>
-                                      <span className="h-[24px] flex items-center justify-center">View Details</span>
+                                      <span className="h-[24px] flex items-center justify-center">
+                                        View Details
+                                      </span>
+                                      <span className="h-[24px] flex items-center justify-center">
+                                        View Details
+                                      </span>
                                     </span>
                                   </span>
                                 </Link>
@@ -130,8 +134,12 @@ export default function CaseStudiesAccordion() {
                             >
                               <span className="relative block overflow-hidden h-[24px]">
                                 <span className="flex flex-col transition-transform duration-300 ease-out group-hover:-translate-y-1/2">
-                                  <span className="h-[24px] flex items-center justify-center">View Details</span>
-                                  <span className="h-[24px] flex items-center justify-center">View Details</span>
+                                  <span className="h-[24px] flex items-center justify-center">
+                                    View Details
+                                  </span>
+                                  <span className="h-[24px] flex items-center justify-center">
+                                    View Details
+                                  </span>
                                 </span>
                               </span>
                             </Link>

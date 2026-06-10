@@ -11,16 +11,20 @@ import FAQ from "@/features/faq/FAQ";
 export default function Home() {
   return (
     <>
-      <SEO title="Precision Neurology Care" description="Board-certified neurology practice offering precision diagnosis, structured treatment, and long-term care." path="/" />
+      <SEO
+        title="Precision Neurology Care"
+        description="Board-certified neurology practice offering precision diagnosis, structured treatment, and long-term care."
+        path="/"
+      />
       <main className="overflow-x-clip">
-      <Hero />
-      <AboutSection />
-      <ServicesSection />
-      <CaseStudiesAccordion />
-      <Testimonials />
-      <BookingForm className="mt-24 md:mt-32" />
-      <ArticlesSection />
-      <FAQ />
+        <Hero />
+        <AboutSection />
+        <ServicesSection />
+        <CaseStudiesAccordion />
+        <Testimonials />
+        <BookingForm className="mt-24 md:mt-32" />
+        <ArticlesSection />
+        <FAQ />
       </main>
     </>
   );

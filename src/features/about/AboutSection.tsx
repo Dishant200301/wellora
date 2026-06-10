@@ -20,7 +20,8 @@ export default function AboutSection() {
           About me
         </div>
         <h2 className="xl:col-span-3 text-[30px] md:text-[32px] lg:text-[38px] xl:text-[44.1px] leading-[38px] md:leading-[40px] lg:leading-[48px] xl:leading-[56px] font-medium text-[#111514] tracking-tight">
-          With a patient-first philosophy, Dr. Arden focuses on accurate diagnosis, clear communication, and long term care strategies.
+          With a patient-first philosophy, Dr. Wellora focuses on accurate diagnosis, clear
+          communication, and long term care strategies.
         </h2>
       </div>
 
@@ -60,10 +61,10 @@ export default function AboutSection() {
         >
           {/* Logo and title information */}
           <div className="flex items-center gap-3.5">
-            <img 
-              src="/images/home/about.webp" 
-              alt="Northbridge Medical Logo" 
-              className="size-16 object-contain shrink-0" 
+            <img
+              src="/images/home/about.webp"
+              alt="Northbridge Medical Logo"
+              className="size-16 object-contain shrink-0"
             />
             <div>
               <div className="text-[16.3px] leading-[28px] font-normal text-[#111514]">
@@ -77,7 +78,8 @@ export default function AboutSection() {
 
           {/* Description text with Heading 4 specs */}
           <h4 className="text-[18px] md:text-[24px] xl:text-[29.4px] leading-[28px] md:leading-[34px] xl:leading-[40px] font-medium text-[#111514] tracking-tight">
-            Board-certified neurologist with extensive clinical experience, focused on accurate diagnosis, clear treatment planning, and evidence-based neurological care.
+            Board-certified neurologist with extensive clinical experience, focused on accurate
+            diagnosis, clear treatment planning, and evidence-based neurological care.
           </h4>
         </motion.div>
       </div>

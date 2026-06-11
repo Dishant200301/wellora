@@ -1,73 +1,48 @@
-import { Routes, Route, useLocation, matchPath } from "react-router-dom";
-import { useEffect } from "react";
-import { Toaster } from "@/components/ui/sonner";
-import Navbar from "@/features/navbar/Navbar";
-import Footer from "@/features/footer/Footer";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Services from "@/pages/Services";
-import ServiceDetails from "@/pages/ServiceDetails";
-import CaseStudies from "@/pages/CaseStudies";
-import CaseStudyDetails from "@/pages/CaseStudyDetails";
-import Articles from "@/pages/Articles";
-import ArticleDetails from "@/pages/ArticleDetails";
-import BookAppointment from "@/pages/BookAppointment";
-import Contact from "@/pages/Contact";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import TermsConditions from "@/pages/TermsConditions";
-import NotFound from "@/pages/NotFound";
+import { Routes, Route } from "react-router-dom";
+import { Toaster } from "@/modules/core/components/ui/sonner";
+import Navbar from "@/modules/core/components/Navbar";
+import Footer from "@/modules/core/components/Footer";
+import { ScrollToTop } from "@/modules/core/components/ScrollToTop";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-  }, [pathname]);
-  return null;
-}
+import HomePage from "@/modules/home/pages/HomePage";
+import AboutPage from "@/modules/about/pages/AboutPage";
+import ServicesPage from "@/modules/services/pages/ServicesPage";
+import ServiceDetailsPage from "@/modules/services/pages/ServiceDetailsPage";
+import CaseStudiesPage from "@/modules/case-studies/pages/CaseStudiesPage";
+import CaseStudyDetailsPage from "@/modules/case-studies/pages/CaseStudyDetailsPage";
+import ArticlesPage from "@/modules/blog/pages/ArticlesPage";
+import ArticleDetailsPage from "@/modules/blog/pages/ArticleDetailsPage";
+import BookAppointmentPage from "@/modules/book-appointment/pages/BookAppointmentPage";
+import ContactPage from "@/modules/contact/pages/ContactPage";
+import PrivacyPolicyPage from "@/modules/privacy-policy/pages/PrivacyPolicyPage";
+import TermsConditionsPage from "@/modules/terms-conditions/pages/TermsConditionsPage";
+import NotFoundPage from "@/modules/core/pages/NotFoundPage";
 
 export default function App() {
-  const { pathname } = useLocation();
-
-  const validPaths = [
-    "/",
-    "/about",
-    "/services",
-    "/services/:slug",
-    "/case-studies",
-    "/case-studies/:slug",
-    "/articles",
-    "/articles/:slug",
-    "/book-appointment",
-    "/contact",
-    "/privacy-policy",
-    "/terms-conditions",
-  ];
-
-  const showNavAndFooter = true;
-
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <ScrollToTop />
-      {showNavAndFooter && <Navbar />}
+      <Navbar />
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<ServiceDetails />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:slug" element={<ArticleDetails />} />
-          <Route path="/book-appointment" element={<BookAppointment />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailsPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/case-studies/:slug" element={<CaseStudyDetailsPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/:slug" element={<ArticleDetailsPage />} />
+          <Route path="/book-appointment" element={<BookAppointmentPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-conditions" element={<TermsConditionsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      {showNavAndFooter && <Footer />}
+      <Footer />
       <Toaster position="top-right" richColors />
     </div>
   );
 }
+
